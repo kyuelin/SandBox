@@ -8,7 +8,7 @@ import java.util.stream.IntStream;
  * Created by linken on 4/19/17.
  */
 public class Generator {
-    int[] generateIntArray(int length, int range) {
+    public static int[] generateIntArray(int length, int range) {
         int[] cards = new int[length];
 
         int[] numbers = new int[range + 1];
@@ -29,7 +29,7 @@ public class Generator {
     }
 
     public static void main(String[] args) {
-        IntStream.range(0, 10).forEach(nbr -> new Generator().generateIntArray(4, 10));
+        IntStream.range(0, 10).forEach(nbr -> Generator.generateIntArray(4, 10));
     }
 
 }

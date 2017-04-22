@@ -8,4 +8,9 @@ public class AddOperator implements Operator {
     public int operate(int op1, int op2) {
         return op1+op2;
     }
+
+    @Override
+    public String toString() {
+        return "+";
+    }
 }

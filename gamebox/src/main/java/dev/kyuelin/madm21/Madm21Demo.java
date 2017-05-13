@@ -1,7 +1,11 @@
 package dev.kyuelin.madm21;
 
-import javax.annotation.Generated;
-import java.util.Arrays;
+import dev.kyuelin.madm21.operators.AddOperator;
+import dev.kyuelin.madm21.operators.MinusOperator;
+import dev.kyuelin.madm21.operators.MultiplyOperator;
+import dev.kyuelin.madm21.operators.Operator;
+import dev.kyuelin.madm21.utils.Generator;
+
 import java.util.stream.IntStream;
 
 /**
@@ -9,14 +13,13 @@ import java.util.stream.IntStream;
  */
 public class Madm21Demo {
 
-    public static final int max_cards = 4;
-    public static final int max_number = 10;
-    public static final int max_operators = 4;
-    public static final int TWENTY_ONE = 21;
+    private static final int max_cards = 4;
+    private static final int max_number = 10;
+    private static final int max_operators = 4;
+    private static final int TWENTY_ONE = 21;
 
     public boolean find21(int[] cards, Operator[] operators) {
         int[] temp_cards = new int[cards.length];
-        int temp_card_index = 0;
 
         for (int i = 0; i < max_cards; i++) {
             temp_cards[0] = cards[i];
@@ -79,10 +82,15 @@ public class Madm21Demo {
 
     public static void main(String[] args) {
         Madm21Demo demo = new Madm21Demo();
-        Operator[] operators = {new MinusOperator(), new AddOperator(), new DivideOperator(), new MultiplyOperator()};
+
+        Operator[] operators = {new MinusOperator(), new AddOperator(), new AddOperator.DivideOperator(), new MultiplyOperator()};
 
         IntStream.range(1, 100000).forEach(nbr ->
                 demo.find21(Generator.generateIntArray(max_cards, max_number), operators));
+/*
+        int[] cards = {10,10,1,4};
+        demo.find21(cards, operators);
+*/
     }
 
 }

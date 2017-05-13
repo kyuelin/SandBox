@@ -1,4 +1,4 @@
-package dev.kyuelin.madm21;
+package dev.kyuelin.madm21.utils;
 
 import java.util.Arrays;
 import java.util.Random;

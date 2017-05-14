@@ -16,6 +16,11 @@
             <artifactId>spring-boot-autoconfigure</artifactId>
             <version>1.4.1.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>RELEASE</version>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>

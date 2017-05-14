@@ -1,4 +1,4 @@
-package dev.kyuelin.sbox101.domain;
+package dev.kyuelin.sbox101.iapp;
 
 /**
  * Created by kennethlin on 5/13/17.

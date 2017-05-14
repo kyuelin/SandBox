@@ -1,8 +1,7 @@
-package dev.kyuelin.sbox101;
+package dev.kyuelin.sbox101.iapp;
 
-import dev.kyuelin.sbox101.domain.HerApplication;
-import dev.kyuelin.sbox101.domain.IApplication;
-import dev.kyuelin.sbox101.domain.MyApplication;
+import dev.kyuelin.sbox101.iapp.HerApplication;
+import dev.kyuelin.sbox101.iapp.IApplication;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.annotation.Bean;
 
@@ -16,4 +15,6 @@ public class AppConfig {
     public IApplication application() {
         return new HerApplication();
     }
+
+
 }

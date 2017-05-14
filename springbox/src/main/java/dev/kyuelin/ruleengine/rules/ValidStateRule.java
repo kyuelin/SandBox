@@ -1,7 +1,7 @@
-package dev.kyuelin.sboxdemo.ruleengine.rules;
+package dev.kyuelin.ruleengine.rules;
 
-import dev.kyuelin.sboxdemo.ruleengine.base.AbstractRule;
-import dev.kyuelin.sboxdemo.ruleengine.model.LoanApplication;
+import dev.kyuelin.ruleengine.base.AbstractRule;
+import dev.kyuelin.ruleengine.domain.LoanApplication;
 
 import java.util.List;
 
@@ -12,6 +12,10 @@ public class ValidStateRule extends AbstractRule {
 
     public void setStates(List states) {
         this.states = states;
+    }
+
+    public List getStates() {
+        return states;
     }
 
     private List states;

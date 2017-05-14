@@ -7,19 +7,21 @@ import dev.kyuelin.sbox101.generator.configs.OutputConfig;
 import dev.kyuelin.sbox101.iapp.configs.AppConfig;
 import dev.kyuelin.sbox101.iapp.domain.IApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import static dev.kyuelin.utils.ContextUtils.getContext;
 
 /**
  * Created by kennethlin on 5/13/17.
  */
-public class Springbox101 {
+public class Springbox101Main {
     public static void main(String[] args) {
         // load context from xml, otherwise config classes
         ApplicationContext context = null;
-        //context = new ClassPathXmlApplicationContext("Springbox101Context.xml");
+        //context = new ClassPathXmlApplicationContext("sbox101/Springbox101Context.xml");
 
         // start iapp
-        //startIapp(context);
+        startIapp(context);
 
         // start generator
         startGenerator(context);
@@ -37,11 +39,11 @@ public class Springbox101 {
         application.start();
     }
 
-    private static ApplicationContext getContext(ApplicationContext context, Class[] configClasses) {
+/*    private static ApplicationContext getContext(ApplicationContext context, Class[] configClasses) {
         if (null == context) {
             context = new AnnotationConfigApplicationContext(configClasses);
         }
         Verify.verifyNotNull(context);
         return context;
-    }
+    }*/
 }

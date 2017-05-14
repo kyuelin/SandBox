@@ -1,4 +1,4 @@
-package dev.kyuelin.sboxdemo.ruleengine.model;
+package dev.kyuelin.ruleengine.domain;
 
 import java.util.Arrays;
 

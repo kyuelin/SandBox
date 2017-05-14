@@ -1,7 +1,7 @@
-package dev.kyuelin.sboxdemo.ruleengine.actions;
+package dev.kyuelin.ruleengine.actions;
 
-import dev.kyuelin.sboxdemo.ruleengine.base.AbstractPersistenceAwareAction;
-import dev.kyuelin.sboxdemo.ruleengine.model.LoanApplication;
+import dev.kyuelin.ruleengine.base.AbstractPersistenceAwareAction;
+import dev.kyuelin.ruleengine.domain.LoanApplication;
 
 /**
  * Created by kennethlin on 5/13/17.

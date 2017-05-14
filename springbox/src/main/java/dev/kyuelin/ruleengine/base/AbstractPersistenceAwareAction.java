@@ -1,4 +1,4 @@
-package dev.kyuelin.sboxdemo.ruleengine.base;
+package dev.kyuelin.ruleengine.base;
 
 /**
  * Created by kennethlin on 5/13/17.

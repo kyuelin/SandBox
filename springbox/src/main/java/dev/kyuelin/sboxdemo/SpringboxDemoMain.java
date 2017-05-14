@@ -6,10 +6,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication // same as @Configuration @EnableAutoConfiguration @ComponentScan
-public class SpringboxDemo {
+public class SpringboxDemoMain {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringboxDemo.class, args);
+        SpringApplication.run(SpringboxDemoMain.class, args);
     }
 
 }

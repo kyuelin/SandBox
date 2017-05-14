@@ -1,7 +1,8 @@
-package dev.kyuelin.sboxdemo.ruleengine;
+package dev.kyuelin.ruleengine.ruleengine;
 
-import dev.kyuelin.sboxdemo.ruleengine.base.SpringRuleEngine;
-import dev.kyuelin.sboxdemo.ruleengine.model.LoanApplication;
+import dev.kyuelin.ruleengine.LoanProcessRuleEngine;
+import dev.kyuelin.ruleengine.base.SpringRuleEngine;
+import dev.kyuelin.ruleengine.domain.LoanApplication;
 
 import static org.junit.jupiter.api.Assertions.*;
 

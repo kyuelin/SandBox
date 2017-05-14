@@ -1,6 +1,6 @@
-package dev.kyuelin.sboxdemo.ruleengine;
+package dev.kyuelin.ruleengine;
 
-import dev.kyuelin.sboxdemo.ruleengine.base.SpringRuleEngine;
+import dev.kyuelin.ruleengine.base.SpringRuleEngine;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class LoanProcessRuleEngine extends SpringRuleEngine {
     public static final SpringRuleEngine getEngine(String name) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("SpringRuleEngineContext");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("ruleengine/SpringRuleEngineContext");
         return (SpringRuleEngine) context.getBean(name);
     }
 }

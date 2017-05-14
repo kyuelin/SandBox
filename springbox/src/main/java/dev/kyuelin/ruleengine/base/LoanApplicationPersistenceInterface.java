@@ -1,6 +1,6 @@
-package dev.kyuelin.sboxdemo.ruleengine.base;
+package dev.kyuelin.ruleengine.base;
 
-import dev.kyuelin.sboxdemo.ruleengine.model.LoanApplication;
+import dev.kyuelin.ruleengine.domain.LoanApplication;
 
 /**
  * Created by kennethlin on 5/13/17.

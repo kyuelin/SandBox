@@ -1,6 +1,4 @@
-package dev.kyuelin.sboxdemo.ruleengine.base;
-
-import dev.kyuelin.sboxdemo.ruleengine.base.AbstractComponent;
+package dev.kyuelin.ruleengine.base;
 
 /**
  * Created by kennethlin on 5/13/17.

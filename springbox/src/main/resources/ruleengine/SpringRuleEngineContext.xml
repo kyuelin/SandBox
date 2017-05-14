@@ -1,12 +1,16 @@
 <!-- rule engine processor -->
-<beans>
-    <bean id="SharkysExpressLoansApplicationProcessor" class="SpringRuleEngine">
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <bean id="SharkysExpressLoansApplicationProcessor" class="dev.kyuelin.ruleengine.base.SpringRuleEngine">
         <property name="firstStep">
             <ref bean="ValidApplicationRule"/>
         </property>
     </bean>
     <!-- validation -->
-    <bean id="ValidApplicationRule" class="ValidApplicationRule">
+    <bean id="ValidApplicationRule" class="dev.kyuelin.ruleengine.rules.ValidApplicationRule">
         <property name="positiveOutcomeStep">
             <ref bean="ValidStateRule"/>
         </property>
@@ -15,18 +19,20 @@
         </property>
     </bean>
 
+    <bean id="ValidIncomeExpenseRatioRule" class="dev.kyuelin.ruleengine.rules.ValidIncomeExpenseRatioRule"/>
+
     <!-- rejection -->
-    <bean id="RejectionAction" class="ProcessRejectionAction">
+    <bean id="RejectionAction" class="dev.kyuelin.ruleengine.actions.ProcessRejectionAction">
         <property name="persistenceService">
             <ref bean="LoanApplicationPersistenceService"/>
         </property>
 
     </bean>
     <!-- persistence service -->
-    <bean id="LoanApplicationPersistenceService" class="MockLoanApplicationPersistence"/>
+    <bean id="LoanApplicationPersistenceService" class="dev.kyuelin.ruleengine.base.MockLoanApplicationPersistence"/>
 
     <!-- check valid state -->
-    <bean id="ValidStateRule" class="ValidStateRule">
+    <bean id="ValidStateRule" class="dev.kyuelin.ruleengine.rules.ValidStateRule">
         <property name="validStates">
             <list>
                 <value>TX</value>

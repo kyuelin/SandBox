@@ -4,11 +4,10 @@ import com.google.common.base.Verify;
 import dev.kyuelin.sbox101.generator.configs.GeneratorConfig;
 import dev.kyuelin.sbox101.generator.domain.OutputHelper;
 import dev.kyuelin.sbox101.generator.configs.OutputConfig;
-import dev.kyuelin.sbox101.iapp.AppConfig;
-import dev.kyuelin.sbox101.iapp.IApplication;
+import dev.kyuelin.sbox101.iapp.configs.AppConfig;
+import dev.kyuelin.sbox101.iapp.domain.IApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * Created by kennethlin on 5/13/17.

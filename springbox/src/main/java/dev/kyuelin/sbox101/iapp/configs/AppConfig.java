@@ -1,7 +1,7 @@
-package dev.kyuelin.sbox101.iapp;
+package dev.kyuelin.sbox101.iapp.configs;
 
-import dev.kyuelin.sbox101.iapp.HerApplication;
-import dev.kyuelin.sbox101.iapp.IApplication;
+import dev.kyuelin.sbox101.iapp.domain.HerApplication;
+import dev.kyuelin.sbox101.iapp.domain.IApplication;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.annotation.Bean;
 

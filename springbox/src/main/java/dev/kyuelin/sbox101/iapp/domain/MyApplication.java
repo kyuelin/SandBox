@@ -1,4 +1,4 @@
-package dev.kyuelin.sbox101.iapp;
+package dev.kyuelin.sbox101.iapp.domain;
 
 
 /**

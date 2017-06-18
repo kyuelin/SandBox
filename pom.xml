@@ -11,6 +11,7 @@
     <modules>
         <module>gamebox</module>
         <module>springbox</module>
+        <module>phoenixbox</module>
     </modules>
 
 

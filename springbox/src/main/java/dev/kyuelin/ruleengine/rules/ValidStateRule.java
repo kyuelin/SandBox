@@ -10,19 +10,15 @@ import java.util.List;
  */
 public class ValidStateRule extends AbstractRule {
 
-    public void setStates(List states) {
-        this.states = states;
+    public void setValidStates(List validStates) {
+        this.validStates = validStates;
     }
 
-    public List getStates() {
-        return states;
-    }
-
-    private List states;
+    private List validStates;
 
     protected boolean apply(Object obj) throws Exception {
         LoanApplication application = (LoanApplication) obj;
-        if (states.contains(application.getStateCode())) {
+        if (validStates.contains(application.getStateCode())) {
             return true;
         }
         return false;

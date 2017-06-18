@@ -5,35 +5,26 @@ package dev.kyuelin.ruleengine.base;
  */
 public abstract class AbstractRule extends AbstractComponent {
 
-    private AbstractComponent positiveAbstractComponent;
-    private AbstractComponent negativeAbstractComponent;
+    private AbstractComponent positiveOutcomeStep;
+    private AbstractComponent negativeOutcomeStep;
 
     public void execute(Object obj) throws Exception{
         boolean result = apply(obj);
         if (result == true) {
-            positiveAbstractComponent.execute(obj);
+            positiveOutcomeStep.execute(obj);
         }
         else {
-            negativeAbstractComponent.execute(obj);
+            negativeOutcomeStep.execute(obj);
         }
     }
 
     protected abstract boolean apply(Object obj) throws Exception;
 
-    public AbstractComponent getPositiveAbstractComponent() {
-        return positiveAbstractComponent;
+    public void setPositiveOutcomeStep(AbstractComponent positiveOutcomeStep) {
+        this.positiveOutcomeStep = positiveOutcomeStep;
     }
 
-    public void setPositiveAbstractComponent(AbstractComponent positiveAbstractComponent) {
-        this.positiveAbstractComponent = positiveAbstractComponent;
+    public void setNegativeOutcomeStep(AbstractComponent negativeOutcomeStep) {
+        this.negativeOutcomeStep = negativeOutcomeStep;
     }
-
-    public AbstractComponent getNegativeAbstractComponent() {
-        return negativeAbstractComponent;
-    }
-
-    public void setNegativeAbstractComponent(AbstractComponent negativeAbstractComponent) {
-        this.negativeAbstractComponent = negativeAbstractComponent;
-    }
-
 }

@@ -3,6 +3,7 @@ package dev.kyuelin.sbox101.iapp.configs;
 import dev.kyuelin.sbox101.iapp.domain.HerApplication;
 import dev.kyuelin.sbox101.iapp.domain.IApplication;
 import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 
 /**
@@ -15,6 +16,5 @@ public class AppConfig {
     public IApplication application() {
         return new HerApplication();
     }
-
 
 }

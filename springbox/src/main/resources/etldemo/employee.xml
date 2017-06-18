@@ -1,0 +1,29 @@
+<beanio xmlns="http://www.beanio.org/2012/03"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">
+    <!--<import resource="classpath:company.xml"/>-->
+
+    <stream name="employeeFile" format="csv">
+        <record name="employee" class="map">
+            <field name="type" rid="true" literal="emp"/>
+            <field name="company" />
+            <field name="department"/>
+            <field name="firstName" />
+            <field name="lastName" />
+            <field name="title" />
+            <field name="salary" />
+            <field name="hireDate" />
+        </record>
+    </stream>
+
+<!--
+    <stream name="companyFile" format="csv">
+        <record name="company" class="map">
+            <field name="type" rid="true" literal="com"/>
+            <field name="name"/>
+            <field name="address"/>
+            <field name="phone"/>
+        </record>
+    </stream>
+-->
+</beanio>

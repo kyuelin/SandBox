@@ -222,6 +222,8 @@ bundles/
 #############
 ## JetBrain
 #############
-
+*.iml
+*/*.iml
+*.idea
 .idea/
 .idea/workspace.xml

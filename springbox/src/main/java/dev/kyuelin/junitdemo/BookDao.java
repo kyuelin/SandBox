@@ -1,4 +1,7 @@
 package dev.kyuelin.junitdemo;
 
-public class BookDao {
+import java.util.List;
+
+public interface BookDao {
+    List<Book> findBookByAuthor(String author);
 }
